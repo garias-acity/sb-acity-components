@@ -1,13 +1,13 @@
 import { FC } from "react";
 import style from "./box.module.scss";
 
-interface Item {
+export interface BoxItemProps {
   id: number;
   text: string; 
   backgroundColor: 'suenos' | 'vip-royal' | 'sorteo-estelar' | 'mega-torneo' | 'top-atlantic';
 }
 
-export const BoxItem: FC<Item> = ({ id, text, backgroundColor }) => {
+export const BoxItem: FC<BoxItemProps> = ({ id, text, backgroundColor }) => {
   
   const bgColor = `${style[`box__item-${backgroundColor}`]}`
   

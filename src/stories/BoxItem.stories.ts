@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { BoxItem } from '../components/Box/BoxItem';
+import { BoxItem, type BoxItemProps } from '../components/Box/BoxItem';
 
-const meta = {
+const meta: Meta<BoxItemProps> = {
     title: 'box/BoxItem',
     component: BoxItem,
     tags: ['autodocs'],
