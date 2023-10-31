@@ -1,21 +1,33 @@
 .illumination {
   &_container {
     width: 100%;
-    background: radial-gradient(
-      circle farthest-corner at center center,
-      #f7f5ed 0%,
-      #af9e46 10%,
-      transparent 30%
-    );
     text-align: center;
     display: flex;
     justify-content: center;
+    &::before {
+      width: var(--illumination-width);
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background: radial-gradient(
+        circle farthest-corner at center center,
+        #f7f5ed 0%,
+        #af9e46 10%,
+        transparent 30%
+      );
+    }
   }
+
   &_content {
     background-image: url(https://testing-acp.calimaco.com/static/img/promociones/home-trx/cards/logos/brights.svg);
     background-position: center;
     background-size: contain;
     width: 100%;
+    height: min-content;
     text-align: center;
     position: relative;
     background-repeat: no-repeat;
