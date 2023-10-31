@@ -14,7 +14,6 @@ const meta: Meta<typeof PrizeFont> = {
   },
   argTypes: {
     coin: {
-      description: `${Coin.PEN} | ${Coin.USD}`,
       options: [Coin.PEN, Coin.USD],
       control: { type: "select" },
     },
