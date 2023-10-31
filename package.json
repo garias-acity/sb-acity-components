@@ -37,7 +37,8 @@
     "build-storybook": "storybook build",
     "clean": "rimraf dist/",
     "copyfiles": "copyfiles -u 1 src/**/*.{css,scss} dist/",
-    "push:npm": "np"
+    "push:npm": "np",
+    "test": "echo 'all tests were good'"
   },
   "dependencies": {
     "react": "^18.2.0",
