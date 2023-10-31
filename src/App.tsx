@@ -6,7 +6,7 @@ const App = () => {
         Renderizar componentes antes de desplegar
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

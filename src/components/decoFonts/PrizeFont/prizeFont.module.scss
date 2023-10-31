@@ -1,0 +1,119 @@
+@use "../../../scss//breakpoints" as bp;
+@use "../../../scss/fonts" as font;
+
+.content,
+.shadows {
+  font-family: "BebasNeue";
+  font-variant: small-caps;
+  font-size: 96px;
+  font-weight: 400;
+  text-align: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  @include bp.md {
+    font-size: 10rem;
+  }
+}
+
+.content {
+  transform: translateX(-10px);
+  color: white;
+  background-image: linear-gradient(
+    180deg,
+    rgba(145, 98, 31, 1) 0%,
+    rgba(213, 155, 64, 1) 13%,
+    rgba(251, 237, 124, 1) 35%,
+    rgba(255, 243, 210, 1) 45%,
+    rgba(251, 237, 124, 1) 50%,
+    rgba(231, 179, 72, 1) 76%,
+    rgba(145, 98, 31, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+}
+
+.content::before {
+  background-image: -webkit-linear-gradient(
+    270deg,
+    rgba(237, 184, 101, 1) 0%,
+    rgba(255, 238, 120, 1) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+}
+
+.content,
+.content::before {
+  z-index: -1;
+}
+
+.content::before,
+.shadows::after {
+  content: attr(data-text);
+}
+.shadows,
+.content::before,
+.shadows::after {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.content,
+.content::before,
+.shadows {
+  line-height: 100%;
+}
+
+.shadows {
+  z-index: -2;
+  text-shadow: 4px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.shadows::after {
+  z-index: -3;
+  text-shadow: 12px 4px 0px #8e4203, 7px 1px 7px #4b2204,
+    0px 4px 5px rgba(223, 182, 98, 0.4);
+  color: transparent;
+}
+
+.decorators {
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 50px;
+  //   height: 50px;
+  //   background: url(/src/assets/img/moneda.svg) center no-repeat;
+  //   background-size: cover;
+  //   z-index: 2;
+  //   left: -5px;
+  //   bottom: 8px;
+  //   @media screen and (max-width: 640px) {
+  //     width: 37px;
+  //     height: 37px;
+  //   }
+  // }
+}
+span.content::after {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 36.8px;
+  background-image: var(--moneda);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+  bottom: 8px;
+  left: calc(50% - 150px);
+  @include bp.md {
+    bottom: 16px;
+    left: clamp(50% - 150px, 10px, 50%);
+  }
+}
