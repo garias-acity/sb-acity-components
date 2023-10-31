@@ -13,6 +13,11 @@ const meta: Meta<typeof Illumination> = {
   argTypes: {
     width: {
       type: "string",
+      description: "Width value set to illumnation element",
+    },
+    children: {
+      type: "function",
+      description: "Child component to be wrapped",
     },
   },
 } satisfies Meta<typeof Illumination>;
