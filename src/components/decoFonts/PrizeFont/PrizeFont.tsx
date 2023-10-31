@@ -1,4 +1,4 @@
-import { PropsWithChildren, memo, useMemo } from "react";
+import { PropsWithChildren, memo } from "react";
 import styles from "./prizeFont.module.scss";
 
 export interface PrizeFontProps {
@@ -14,10 +14,7 @@ const coins = {
 export const PrizeFont = memo((props: PropsWithChildren<PrizeFontProps>) => {
   const { amount, coin } = props;
 
-  const text = useMemo(
-    () => `${coins[coin] ?? coins.PEN}${amount}`,
-    [amount, coin]
-  );
+  const text = `${coins[coin] ?? coins.PEN}${amount}`;
 
   return (
     <>
