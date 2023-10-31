@@ -1,0 +1,23 @@
+.illumination {
+  &_container {
+    width: 100%;
+    background: radial-gradient(
+      circle farthest-corner at center center,
+      #f7f5ed 0%,
+      #af9e46 10%,
+      transparent 30%
+    );
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  &_content {
+    background-image: url(https://testing-acp.calimaco.com/static/img/promociones/home-trx/cards/logos/brights.svg);
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat;
+  }
+}
