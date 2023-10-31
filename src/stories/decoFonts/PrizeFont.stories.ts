@@ -37,9 +37,3 @@ export const Thousand: Story = {
     amount: "1,000",
   },
 };
-export const TenThousand: Story = {
-  args: {
-    amount: "10,000",
-    coin: Coin.PEN,
-  },
-};
