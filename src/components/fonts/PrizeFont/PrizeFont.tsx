@@ -23,12 +23,16 @@ export const PrizeFont = memo((props: PropsWithChildren<PrizeFontProps>) => {
 
   return (
     <>
-      <div className={styles.decorators}>
+      <div className={styles.decorators} aria-label="decoratorCont">
         <h3 className={styles.content}>
-          <span className={styles.content} data-text={text}>
+          <span
+            className={styles.content}
+            aria-label="content"
+            data-text={text}
+          >
             {text}
           </span>
-          <span className={styles.shadows} data-text={text}>
+          <span className={styles.shadows} aria-label="shadow" data-text={text}>
             {text}
           </span>
         </h3>

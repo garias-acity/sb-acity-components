@@ -29,6 +29,7 @@
     "react-dom": "^18.2.0"
   },
   "scripts": {
+    "test": "vitest",
     "dev": "vite",
     "build": "npm run clean && tsc && npm run copyfiles",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -37,8 +38,7 @@
     "build-storybook": "storybook build",
     "clean": "rimraf dist/",
     "copyfiles": "copyfiles -u 1 src/**/*.{css,scss} dist/",
-    "push:npm": "np",
-    "test": "echo 'all tests were good'"
+    "push:npm": "np"
   },
   "dependencies": {
     "@types/node": "^20.8.10",
@@ -58,6 +58,8 @@
     "@storybook/react": "^7.5.2",
     "@storybook/react-vite": "^7.5.2",
     "@storybook/testing-library": "^0.2.2",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -69,6 +71,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.15",
+    "jsdom": "^22.1.0",
     "np": "^8.0.4",
     "postcss": "^8.4.28",
     "rimraf": "^5.0.5",
