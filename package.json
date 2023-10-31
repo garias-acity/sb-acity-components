@@ -1,7 +1,7 @@
 {
   "name": "acity-custom-components",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.1-rc1",
   "type": "module",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -36,11 +36,15 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "clean": "rimraf dist/",
-    "copyfiles": "copyfiles -u 1 src/**/*.{css,scss} dist/"
+    "copyfiles": "copyfiles -u 1 src/**/*.{css,scss} dist/",
+    "push:npm": "np"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.1",
