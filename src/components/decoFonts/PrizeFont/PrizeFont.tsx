@@ -1,9 +1,14 @@
 import { PropsWithChildren, memo } from "react";
 import styles from "./prizeFont.module.scss";
 
+export enum Coin {
+  USD = "USD",
+  PEN = "PEN",
+}
+
 export interface PrizeFontProps {
   amount: string;
-  coin: "USD" | "PEN";
+  coin?: Coin;
 }
 
 const coins = {
@@ -14,7 +19,7 @@ const coins = {
 export const PrizeFont = memo((props: PropsWithChildren<PrizeFontProps>) => {
   const { amount, coin } = props;
 
-  const text = `${coins[coin] ?? coins.PEN}${amount}`;
+  const text = `${(coin && coins[coin]) ?? coins.PEN}${amount}`;
 
   return (
     <>
