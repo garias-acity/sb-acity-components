@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Coin, PrizeFont } from "@components/decoFonts";
+import { Coin, PrizeFont } from "@/components/fonts";
 
 const meta: Meta<typeof PrizeFont> = {
   title: "Fonts/PrizeFont",

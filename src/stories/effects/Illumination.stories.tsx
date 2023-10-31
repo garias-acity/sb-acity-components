@@ -1,4 +1,4 @@
-import { PrizeFont } from "@/components/decoFonts";
+import { PrizeFont } from "@/components/fonts";
 import { Illumination } from "@/components/effects/Illumination/Illumination";
 import { Meta, StoryObj } from "@storybook/react";
 
