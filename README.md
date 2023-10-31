@@ -1,9 +1,5 @@
 # Componentes creados para ACITY
 
-Instalar 
+Para Instalar este proyecto debes ejecutar el siguiente comando:
 ```
 npm i acity-custom-components
-```
-
-1. [Componente de boxItem]
-2. [Componente label]
