@@ -26,9 +26,12 @@ npm run login
 npm run publish
     - Para publicar la nueva versión de tu paquete
 
+A Tener en cuenta: Cambiar versión en el package.json (esto solo se debe cambiar para un despliegue a producción)
+
 Ruta con validaciones del paquete de despliegues NP
 -------
 npm run push:npm
+    - Revisa login
+    - Revisa commits o push pendientes
+    - Revisa si se ejecutaron correctamente los test
 
-Tener en cuenta 
-Cambiar versión en el package.json (esto solo se debe cambiar para un despliegue a producción)
