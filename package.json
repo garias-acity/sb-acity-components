@@ -40,12 +40,10 @@
     "copyfiles": "copyfiles -u 1 src/**/*.{css,scss} dist/",
     "push:npm": "np"
   },
-  "dependencies": {},
   "engines": {
     "node": ">=12.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.8.10",
     "@storybook/addon-essentials": "^7.5.2",
     "@storybook/addon-interactions": "^7.5.2",
     "@storybook/addon-links": "^7.5.2",
@@ -57,6 +55,7 @@
     "@storybook/testing-library": "^0.2.2",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
+    "@types/node": "^20.8.10",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
