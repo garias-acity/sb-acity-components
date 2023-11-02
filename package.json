@@ -30,6 +30,7 @@
   },
   "scripts": {
     "test": "vitest",
+    "test:publish": "vitest run",
     "dev": "vite",
     "build": "npm run clean && tsc && npm run copyfiles",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -38,7 +39,7 @@
     "build-storybook": "storybook build",
     "clean": "rimraf dist/",
     "copyfiles": "copyfiles -u 1 src/**/*.{css,scss} dist/",
-    "push:npm": "np"
+    "push:npm": "np --test-script=test:publish"
   },
   "engines": {
     "node": ">=12.0.0"
