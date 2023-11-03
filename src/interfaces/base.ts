@@ -7,4 +7,8 @@ export interface IPromtionsNames {
     | "top-atlantic";
 }
 
-export type Theme = "casino" | "apuestas" | "general";
+export enum Theme {
+  COL = "casino",
+  AD = "apuestas",
+  GENERAL = "general",
+}
