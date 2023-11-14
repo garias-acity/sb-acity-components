@@ -12,3 +12,9 @@ export enum Theme {
   AD = "apuestas",
   GENERAL = "general",
 }
+
+export enum ComponentSizes {
+  M = "M",
+  S = "S",
+  XS = "XS",
+}
