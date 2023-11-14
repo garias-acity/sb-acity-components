@@ -5,13 +5,19 @@ Para Instalar este proyecto debes ejecutar el siguiente comando:
 npm i acity-custom-components
 ```
 
-### Desplegar en storybook 
+## Desplegar en storybook 
 
-1. npm run build-storybook
+Para visualizar tu proyecto en Storybook, sigue estos pasos:
 
-### Desplegar en NPM
+1. Ejecuta el siguiente comando para compilar tu proyecto en Storybook:
 
-npm run build
+```sh
+npm run build-storybook
+```
+
+## Desplegar en NPM
+
+1. npm run build
 
     - npm run clean: remueve toda la carpeta dist/
     - tsc: compila los archivos de tipo .ts
@@ -19,19 +25,29 @@ npm run build
 
 Observaciones: Se quitó el vite build de este script para que todos los archivos se creen de manera independiente y se pueda importar granularmente donde se desee utilizar.
 
-Ruta normal 
+### Ruta con validaciones del paquete de despliegues NP (USE)
 ------
-npm run login 
+```
+npm login 
     - Para acceder a tu cuenta de npm
-npm run publish
-    - Para publicar la nueva versión de tu paquete
-
-A Tener en cuenta: Cambiar versión en el package.json (esto solo se debe cambiar para un despliegue a producción)
-
-Ruta con validaciones del paquete de despliegues NP
--------
+```
+```
 npm run push:npm
+
     - Revisa login
     - Revisa commits o push pendientes
     - Revisa si se ejecutaron correctamente los test
+```
+## TODO
+```
+DEVTOOLS
+- OJITO
+- DESIGN MODE
+
+OTP
+- Falta pasar validaciones
+
+FLIPCARD
+- Pasar componente contenedor
+```
 
