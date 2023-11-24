@@ -1,10 +1,11 @@
 import { FC } from "react";
 import style from "./box.module.scss";
+import { IPromotionsNames } from "@/interfaces";
 
 export interface BoxItemProps {
   id: number;
   text: string; 
-  backgroundColor: 'suenos' | 'vip-royal' | 'sorteo-estelar' | 'mega-torneo' | 'top-atlantic';
+  backgroundColor: IPromotionsNames;
 }
 
 export const BoxItem: FC<BoxItemProps> = ({ id, text, backgroundColor }) => {

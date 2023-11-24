@@ -1,0 +1,48 @@
+.sb-btn {
+    color: #000;
+    border: none;
+    padding: 0 16px;
+    border-radius: 8px;
+    outline: 0;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    min-width: 150px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    transition: .3s;
+    span {
+        position: relative;
+        margin-right: 8px;
+    }
+    &--primary {
+        background-color: #d7b730;
+        &:hover {
+            background-color: #e7da82;
+        }
+    }
+    &--secondary {
+        color: #000;
+        background: 0 0;
+        border: 2px solid #000;
+        &:hover {
+            background: rgba(0,0,0,.2);
+        }
+    }
+    &--default {
+        color: #fff;
+        background: 0 0;
+        border: 2px solid #fff;
+        &:hover {
+            background: rgba(0,0,0,.2);
+        }
+    }
+    &--loading {
+        opacity: 0.5;
+    }
+}

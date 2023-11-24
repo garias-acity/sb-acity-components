@@ -1,11 +1,11 @@
-export interface IPromtionsNames {
-  string:
+export type IPromotionsNames =
     | "suenos"
     | "vip-royal"
     | "sorteo-estelar"
     | "mega-torneo"
     | "top-atlantic";
-}
+
+export type IButtonVariant = 'primary' | 'secondary' | 'default';
 
 export enum Theme {
   COL = "casino",
