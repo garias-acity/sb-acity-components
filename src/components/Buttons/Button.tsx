@@ -7,6 +7,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: IButtonVariant;
     icon?: ReactNode,
     isLoading?: boolean;
+    classNames?: string;
     onClick?: () => void;
 }
 
@@ -16,9 +17,10 @@ export const Button: FC<ButtonProps> = ({
     icon,
     isLoading = false,
     children,
+    classNames,
     ...rest
 }) => {
-    const buttonClasses = `sb-btn sb-btn--${variant} ${isLoading ? 'sb-btn--loading' : ''}`;
+    const buttonClasses = `sb-btn sb-btn--${variant} ${classNames} ${isLoading ? 'sb-btn--loading' : ''}`;
 
     return (
         <button className={buttonClasses} {...rest} disabled={isLoading || rest.disabled}>

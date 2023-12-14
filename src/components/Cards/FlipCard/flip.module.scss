@@ -1,0 +1,28 @@
+.wrapper {
+    position: relative;
+}
+
+.frontContainer {
+    backface-visibility: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.1s ease-in-out, translate 0.1s ease-in-out;
+    box-sizing: border-box;
+
+    &.frontFlipped {
+        transform: rotateY(180deg);
+    }
+}
+
+.backContainer {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+
+    &.backFlipped {
+        transform: rotateY(0deg);
+    }
+}

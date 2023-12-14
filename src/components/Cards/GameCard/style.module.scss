@@ -1,0 +1,95 @@
+.gameCard {
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #222226;
+    background-image: url(/loader.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    -webkit-overflow-scrolling: touch;
+    min-width: 150px;
+    min-height: 110px;
+    width: 150px;
+    height: 110px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    filter: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
+    
+    &:hover {
+        .gameCard {
+            &__content, &__favorite {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        min-width: 210px;
+        min-height: 143px;
+        width: 210px;
+        height: 143px;
+    }
+    
+    &__content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(33,33,33,.9);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+        padding: 16px;
+        transition: all .2s ease-in-out;
+        align-items: flex-end;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        &--button {
+            width: 100%;
+            height: 38px !important;
+        }
+    }
+
+    img {
+        transition: all .3s ease-in-out;
+        position: absolute;
+        object-position: center;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+    }
+
+    &__favorite {
+        transition: all .2s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 2;
+        button {
+            background-color: #fff;
+            outline: none;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 99px;
+            padding: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 2px rgba(33,33,33,.15);
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    
+}

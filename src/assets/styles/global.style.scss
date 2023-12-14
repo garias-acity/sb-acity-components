@@ -1,0 +1,33 @@
+:root {
+    --clmc-bg-dark-primary: #ffffff;
+    --clmc-bg-dark-secondary: #111111;
+    --clmc-bg-color-primary: #d7b730;
+    --clmc-bg-color-primary-light: #e7da82;
+    --clmc-bg-color-secondary: #222226;
+    --clmc-bg-color-secondary-light: rgba(255, 255, 255, 0.2);
+    --clmc-bg-color-success: #2bb376;
+    --clmc-bg-color-error: #e81b00;
+    --clmc-bg-color-warning: #e19b32;
+    --clmc-color-primary: #111111;
+    --clmc-color-primary-light: #111111;
+    --clmc-color-secondary: #daff00;
+    --clmc-color-secondary-light: #edff83;
+    --clmc-color-promo: #c742e1;
+    --clmc-text-small: 12px;
+    --clmc-text-medium: 14px;
+    --clmc-text-normal: 16px;
+    --clmc-text-regular: 18px;
+    --clmc-text-big: 20px;
+    --clmc-text-xbig: 24px;
+    --clmc-font: 'tt norms pro', sans-serif;
+    --clmc-border-radius: 8px;
+    --clmc-bg-color-casino: #d7b730;
+    --clmc-bg-color-apuestas: #4fc1a7;
+    --clmc-bg-color-primary-text: #574902
+}
+
+:root.apuestas {
+    --clmc-bg-color-primary: #4fc1a7;
+    --clmc-bg-color-primary-light: #74f5d7;
+    --clmc-bg-color-primary-text: #195c4c
+}
