@@ -1,46 +1,24 @@
-import { cn } from '@/utils/classes';
-import styles from './flip.module.scss';
+import styles from './style.module.scss';
+import { createContext } from 'react';
+import { useFlipCard } from './hook/useFlipCard';
+import { FlipCardContextProps } from './interface';
 
 type Props = React.HTMLProps<HTMLDivElement>;
 
-const FlipCard = (props: Props) => {
+export const FlipCardContext = createContext({} as FlipCardContextProps);
+const { Provider } = FlipCardContext;
+
+export const FlipCardBase = (props: Props) => {
+    const { isFlipped, handleFlipped } = useFlipCard()
     const { children, className, ...rest } = props;
 
     return (
-        <div className={`${styles.wrapper} ${className}`} {...rest}>
-            {children}
-        </div>
+        <Provider
+            value={{ isFlipped, handleFlipped }}
+        >
+             <div className={`${styles.wrapper} ${className}`} {...rest}>
+                {children}
+            </div>
+        </Provider>
     );
 }
-
-export type ContentProps = React.HTMLProps<HTMLDivElement> & {
-    isFlipped: boolean;
-};
-
-FlipCard.Front = function FrontContent(props: ContentProps) {
-    const { children, className, isFlipped, ...rest } = props;
-
-    return (
-        <div
-            className={cn(styles.frontContainer, className, isFlipped && styles.frontFlipped)}
-            {...rest}
-        >
-            {children}
-        </div>
-    );
-};
-
-FlipCard.Back = function BackContent(props: ContentProps) {
-    const { children, className, isFlipped, ...rest } = props;
-
-    return (
-        <div
-            className={cn(styles.backContainer, className, isFlipped && styles.backFlipped)}
-            {...rest}
-        >
-            {children}
-        </div>
-    );
-};
-
-export default FlipCard;

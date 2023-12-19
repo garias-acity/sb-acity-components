@@ -27,7 +27,8 @@
   "dependencies": {
     "@storybook/react": "^7.5.2",
     "@storybook/react-vite": "^7.5.2",
-    "clsx": "^2.0.0"
+    "clsx": "^2.0.0",
+    "storybook-addon-themes": "^6.1.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
