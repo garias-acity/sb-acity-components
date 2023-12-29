@@ -1,5 +1,5 @@
 import './Mylabel.css'
-
+import '@/index.css'
 export interface LabelProps {
     /**
      * Text to display
@@ -26,6 +26,7 @@ export const Mylabel = ({ label, size = 'normal', allCaps = false, color = 'prim
         {
             allCaps ? label.toLocaleUpperCase() : label
         }
+        <div className="flex flex-col bg-blue-50">HOLA AZUL</div>
     </div>
   )
 }

@@ -1,34 +1,41 @@
 import { FC, ButtonHTMLAttributes, ReactNode } from 'react';
 import './button.scss';
 import { IButtonVariant } from '@/interfaces';
-
-// Definir las propiedades del botón
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    label?: string,
     variant?: IButtonVariant;
-    icon?: ReactNode,
+    icon?: {
+        component: ReactNode,
+        position: 'left' | 'right'
+    },
     isLoading?: boolean;
-    classNames?: string;
+    aditionalClasses?: string;
     onClick?: () => void;
 }
 
 // Componente de botón
 export const Button: FC<ButtonProps> = ({
+    label,
     variant = 'default',
-    icon,
+    icon = null,
     isLoading = false,
-    children,
-    classNames,
+    aditionalClasses,
     ...rest
 }) => {
-    const buttonClasses = `sb-btn sb-btn--${variant} ${classNames} ${isLoading ? 'sb-btn--loading' : ''}`;
+    const buttonClasses = `gap-2 sb-btn sb-btn--${variant} ${aditionalClasses} ${isLoading ? 'sb-btn--loading' : ''}`;
 
     return (
         <button className={buttonClasses} {...rest} disabled={isLoading || rest.disabled}>
             {
-                icon && <span>{icon}</span>
+                icon && icon?.position === 'left' && <span className='flex items-center justify-center'>{icon.component}</span>
             }
+            <span>
+                {
+                    label
+                }
+            </span>
             {
-                children
+                icon && icon?.position === 'right' && <span>{icon.component}</span>
             }
         </button>
     );

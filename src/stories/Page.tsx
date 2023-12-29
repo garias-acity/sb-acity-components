@@ -1,26 +1,13 @@
 import React from 'react';
-
-import { Header } from './Header';
 import './page.css';
 
-type User = {
-  name: string;
-};
-
 export const Page: React.FC = () => {
-  const [user, setUser] = React.useState<User>();
 
   return (
     <article>
-      <Header
-        user={user}
-        onLogin={() => setUser({ name: 'Jane Doe' })}
-        onLogout={() => setUser(undefined)}
-        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
-      />
 
-      <section className="storybook-page">
-        <h2>Pages in Storybook</h2>
+      <section className="storybook-page flex flex-col">
+        <h2>Pages in Storybookk</h2>
         <p>
           We recommend building UIs with a{' '}
           <a href="https://componentdriven.org" target="_blank" rel="noopener noreferrer">

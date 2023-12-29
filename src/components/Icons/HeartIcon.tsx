@@ -1,4 +1,4 @@
-import { type IconProps } from "./Interface";
+import { type IconProps } from "./interface";
 
 export const HeartIcon = ({ color = '#000', width = 24, height = 24, fill = 'none' }: IconProps) => {
     return (

@@ -16,10 +16,6 @@
     box-sizing: border-box;
     text-transform: uppercase;
     transition: .3s;
-    span {
-        position: relative;
-        margin-right: 8px;
-    }
     &--primary {
         background-color: #d7b730;
         &:hover {
@@ -31,7 +27,7 @@
         background: 0 0;
         border: 2px solid #000;
         &:hover {
-            background: rgba(0,0,0,.2);
+            background: #F7F5D4;
         }
     }
     &--default {
@@ -42,7 +38,11 @@
             background: rgba(0,0,0,.2);
         }
     }
-    &--loading {
-        opacity: 0.5;
+
+    &:disabled, &.disabled, &--loading {
+        background-color: rgba(33,33,33,.1)!important;
+        color: rgba(33,33,33,.4);
+        box-shadow: none;
+        pointer-events: none;
     }
 }

@@ -3,8 +3,16 @@
   "private": false,
   "version": "0.2.0",
   "type": "module",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "keywords": [
     "react",
     "dev",
@@ -38,7 +46,7 @@
     "test": "vitest",
     "test:push": "vitest run",
     "dev": "vite",
-    "build": "npm run clean && tsc && npm run copyfiles",
+    "build": "npm run clean && tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -78,8 +86,10 @@
     "rimraf": "^5.0.5",
     "sass": "^1.69.5",
     "storybook": "^7.5.2",
+    "tailwindcss": "^3.3.7",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.6.4",
     "vitest": "^0.34.6"
   }
 }

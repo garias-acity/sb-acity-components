@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { OtpInput } from "@/components/forms";
+import { OtpInput } from "../../components/forms";
 
 const meta: Meta<typeof OtpInput> = {
   title: "Forms/OtpInput",

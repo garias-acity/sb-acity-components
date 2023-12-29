@@ -1,2 +1,2 @@
-export * from './Promocard'
+export * from './PromoCard'
 export * from './interface'
